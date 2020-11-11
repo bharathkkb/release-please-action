@@ -54,7 +54,7 @@ async function main () {
       fork,
       token: token,
       label: RELEASE_LABEL,
-      bumpMinorPreMajor,
+      bumpMinorPreMajor: true,
       changelogSections,
       versionFile
     })
