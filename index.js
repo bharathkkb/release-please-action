@@ -5,7 +5,7 @@ const { ReleasePRFactory } = require('release-please/build/src/release-pr-factor
 const RELEASE_LABEL = 'autorelease: pending'
 
 async function main () {
-  const bumpMinorPreMajor = Boolean(core.getInput('bump-minor-pre-major'))
+  const bumpMinorPreMajor = core.getInput('bump-minor-pre-major') ? true : undefined
   const monorepoTags = Boolean(core.getInput('monorepo-tags'))
   const packageName = core.getInput('package-name')
   const path = core.getInput('path') ? core.getInput('path') : undefined
